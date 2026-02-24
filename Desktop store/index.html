@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>My Store Dashboard</title>
+	<meta name="description" content="Developer dashboard listing FakeStoreAPI products with details popup">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header-left">
+			<img src="fakeaway.png" alt="Store Logo" class="logo">
+			<h1>FakeAway Store</h1>
+		</div>
+		<div class="header-right">
+			<div class="search">
+				<input id="search-input" type="search" placeholder="Search by title or category (e.g. mens, womens, electronics)">
+				<button id="search-btn" class="btn primary">Search</button>
+				<button id="clear-btn" class="btn">Clear</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="controls">
+			<p class="hint">Click a product row to view details.</p>
+		</section>
+		<table id="products-table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Category</th>
+					<th>Price</th>
+					<th>Rating</th>
+				</tr>
+			</thead>
+			<tbody id="products-body">
+				<tr><td colspan="5">Loading products…</td></tr>
+			</tbody>
+		</table>
+	</main>
+
+	<div id="modal" class="modal hidden">
+		<div class="modal-content">
+			<button id="close-btn" class="close-btn">×</button>
+			<div id="product-detail"></div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<footer class="footer">Hosted via GitHub Pages — see <a href="README.md">README</a> for deployment steps.</footer>
+</body>
+</html>
+
